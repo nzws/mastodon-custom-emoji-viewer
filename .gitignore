@@ -1,3 +1,6 @@
+# OS generated files
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -60,9 +63,11 @@ typings/
 # next.js build output
 .next
 
-.cache
+# build dist
 
-dist
+# linaria cache
+.linaria-cache
 
+# editor config files
 .idea
 .vscode

@@ -1,11 +1,16 @@
+const OFF = 0;
+const ERROR = 2;
+
 module.exports = {
-  extends: ['eslint:recommended', 'prettier'],
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module'
+  env: { browser: true },
+  extends: ['airbnb', 'prettier', 'prettier/react'],
+  plugins: ['prettier'],
+  rules: {
+    'prettier/prettier': ERROR,
+    'react/jsx-filename-extension': OFF,
+    'react/prop-types': OFF,
+    'import/prefer-default-export': OFF,
+    'import/no-extraneous-dependencies': OFF
   },
-  env: {
-    node: true,
-    browser: true
-  }
+  settings: { react: { pragma: 'h' } }
 };
